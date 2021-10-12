@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import {MailOutline, Menu, Search} from '@material-ui/icons'
+import {MailOutline, Menu, Search, ShopOutlined, ShoppingBasketOutlined, ShoppingCartOutlined} from '@material-ui/icons'
 import { Badge } from '@material-ui/core'
 
 const Container = styled.div`
@@ -41,10 +41,14 @@ const Logo = styled.h1`
 `
 const Direita = styled.div`
     flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
 `
 const ItemMenu = styled.div`
     font-size: 14px;
     cursor: pointer;
+    margin-left: 25px;
 `
 function NavBar() {
     return (
@@ -53,8 +57,8 @@ function NavBar() {
                 <Esquerda>
                     <Lingua>EN</Lingua>
                     <PesquisaContainer>
-                        <Search/>
                         <Input/>
+                        <Search style={{color:"gray", fontSize:16}}/>
                     </PesquisaContainer>
                 </Esquerda>
                 <Centro>
@@ -63,9 +67,11 @@ function NavBar() {
                 <Direita>
                     <ItemMenu>Registar-se</ItemMenu>
                     <ItemMenu>Entrar</ItemMenu>
-                    <Badge badgeContent={4} color="primary">
-                        <MailOutline/>
-                    </Badge>
+                    <ItemMenu>
+                        <Badge badgeContent={4} color="primary">
+                            <ShoppingCartOutlined/>
+                        </Badge>
+                    </ItemMenu>
                 </Direita>
             </Wrapper>
         </Container>
