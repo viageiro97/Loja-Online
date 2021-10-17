@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 
 import LigthBox from '../LightBox/LigthBox'
 import ProductImages from '../../components/Product/ProductImages/ProductImages'
@@ -12,8 +12,8 @@ import {Container,Left,Right} from './Style'
 
 
 function Product() {
-    const [product, setProduct] = useState(singleProduct);
-
+    //Temporario ate o desenvolvimento da API
+    const product = singleProduct;
     return (
         <Container>
             <Left>
