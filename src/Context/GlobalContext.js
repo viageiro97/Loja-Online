@@ -8,7 +8,7 @@ import appReducer from './AppReducer';
 function getSaved(item){
         const saved = localStorage.getItem(item);
         const initialValue = JSON.parse(saved);
-        return initialValue || "";
+        return initialValue || [];
 }
 
 const GlobalContext = createContext();
