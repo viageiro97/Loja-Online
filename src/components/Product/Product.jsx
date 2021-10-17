@@ -1,5 +1,3 @@
-import React, { useEffect, useState } from 'react'
-
 import LigthBox from '../LightBox/LigthBox'
 import ProductImages from '../../components/Product/ProductImages/ProductImages'
 import ProductDetails from '../Product/ProductDetail/ProductDetails'
