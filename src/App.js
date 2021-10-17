@@ -1,13 +1,14 @@
-import Carrinho from "./pages/Carrinho";
-import Inicio from "./pages/Inicio";
-import ListaProdutos from "./pages/ListaProdutos";
-import Login from "./pages/Login";
-import Produto from './pages/Produto'
-import Registo from "./pages/Registo";
+import { ThemeProvider } from "styled-components";
+import ProductPage from "./pages/ProductPage";
+import { GlobalStyles } from "./styles/GlobalStyles";
+import { mainTheme } from "./themes";
 
 function App() {
   return (
-    <Carrinho/>
+    <ThemeProvider theme={mainTheme}>
+      <GlobalStyles/>
+      <ProductPage/>
+    </ThemeProvider>
   );
 }
 
