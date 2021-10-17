@@ -5,7 +5,7 @@ import ProductImages from '../../components/Product/ProductImages/ProductImages'
 import ProductDetails from '../Product/ProductDetail/ProductDetails'
 
 //Temporary Local Data
-import { singleProduct } from '../../Data'
+import { singleProduct } from './data'
 
 import { ImageShowContextProvider } from '../../Context/ImageShowContext'
 import {Container,Left,Right} from './Style'
