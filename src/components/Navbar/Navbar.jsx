@@ -26,7 +26,9 @@ function Navbar() {
     const [isMenuOpen, setIsMenuOpen] = useState(false)
     const [isCartOpen, setIsCartOpen] = useState(false)
     const {state} = useContext(GlobalContext);
-    const cartNum = state.cart.length;
+    const cartNum = state.cart.reduce((sum, val)=>{
+        return sum + val.quant
+    },0)
     
     return (
         <Container>
